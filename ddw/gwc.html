@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/gwc.css">
+    <link rel="stylesheet" href="./css/gwc1.css">
+    <link rel="stylesheet" href="./css/gwc2.css">
+    <link rel="stylesheet" href="./css/gwc4.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/Cookie.js"></script>
+    <!-- <script src="./js/liebiao.js"></script> -->
+    <script src="./js/gwc.js"></script>
+
+</head>
+
+<body>
+    <div id="hd">
+        <div id="tools">
+            <div class="tools">
+                <div class="ddnewhead_operate" dd_name="顶链接">
+                    <ul class="ddnewhead_operate_nav">
+                        <li class="ddnewhead_cart"><a href="javascript:AddToShoppingCart(0);" name="购物车"
+                                dd_name="购物车"><i class="icon_card"></i>购物车<b id="cart_items_count">0</b></a></li>
+                        <li><a target="_blank" href="http://myhome.dangdang.com/myOrder" name="我的订单" dd_name="我的订单"
+                                rel="nofollow">我的订单<b id="unpaid_num"
+                                    style="color:#ff2832;font:bold 12px Arial;"></b></a></li>
+                        <li><a target="_blank" href="http://e.dangdang.com/touch/special/goldenIP/essays.html"
+                                name="mydd_7" dd_name="小说投稿">小说投稿</a></li>
+                        <li class="dang_erweima">
+                            <a target="_blank" href="http://t.dangdang.com/20130220_ydmr" id="a_phonechannel"
+                                onmouseover="showgaoji('a_phonechannel','__ddnav_sjdd');"
+                                onmouseout="hideotherchannel('a_phonechannel','__ddnav_sjdd');" class="menu_btn"><i
+                                    class="icon_tel"></i>手机当当</a>
+                            <div class="tel_pop" style="display: none;" id="__ddnav_sjdd"
+                                onmouseover="showgaoji('a_phonechannel','__ddnav_sjdd');"
+                                onmouseout="hideotherchannel('a_phonechannel','__ddnav_sjdd');">
+                                <a target="_blank" href="http://t.dangdang.com/20130220_ydmr" class="title"><i
+                                        class="icon_tel"></i>手机当当</a><i class="title_shadow"></i>
+                                <div class="tel_pop_box clearfix">
+                                    <div class="tel_pop_box_li"><a href="http://t.dangdang.com/20130220_ydmr"
+                                            dd_name="手机二维码" target="_blank"><span>当当购物客户端</span><img
+                                                src="http://img63.ddimg.cn/upload_img/00550/webpagetop/shopingapp.png"><span
+                                                class="text">下载购物APP<br>手机端1元秒</span></a></div>
+                                    <div class="tel_pop_box_li"><a href="http://t.dangdang.com/20140107_5pz1"
+                                            dd_name="手机二维码" target="_blank"><span>当当读书客户端</span><img
+                                                src="http://img62.ddimg.cn/upload_img/00550/webpagetop/readapp.png"><span
+                                                class="text">万本电子书<br>免费读</span></a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="my_dd"><a class="menu_btn" target="_blank" href="http://myhome.dangdang.com/"
+                                name="我的当当" dd_name="我的当当" id="a_myddchannel"
+                                onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
+                                onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">我的当当</a>
+                            <ul class="ddnewhead_gcard_list" id="__ddnav_mydd"
+                                onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
+                                onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">
+                                <li><a target="_blank" href="http://myhome.dangdang.com/myOrder" name="mydd_7"
+                                        dd_name="新_我的订单">我的订单</a></li>
+                                <li><a target="_blank"
+                                        href="http://shopping.dangdang.com/shoppingcart/shopping_cart.aspx"
+                                        name="mydd_8" dd_name="新_购物车" rel="nofollow">购物车</a></li>
+                                <li><a target="_blank" href="http://my.dangdang.com/memberpoints/index.aspx?ref=my-0-L"
+                                        name="mydd_4" dd_name="我的银铃铛" rel="nofollow">银铃铛抵现</a></li>
+                                <li><a target="_blank" href="http://myhome.dangdang.com/myFavorite" name="mydd_1"
+                                        dd_name="我的收藏" rel="nofollow">我的收藏</a></li>
+                                <li><a target="_blank" href="http://newaccount.dangdang.com/payhistory/mybalance.aspx"
+                                        name="mydd_5" dd_name="我的余额" rel="nofollow">我的余额</a></li>
+                                <li><a target="_blank" href="http://comment.dangdang.com/comment" name="mydd_4"
+                                        dd_name="我的评论" rel="nofollow">我的评论</a></li>
+                                <li><a target="_blank" href="http://newaccount.dangdang.com/payhistory/mycoupon.aspx"
+                                        name="mydd_2" dd_name="礼券/礼品卡" rel="nofollow">礼券/礼品卡</a></li>
+                                <li><a target="_blank" href="http://e.dangdang.com/ebook/listUserEbooks.do"
+                                        name="mydd_6" dd_name="电子书架">电子书架</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu_btn" href="javascript:void(0);" style="cursor:default;" name="qycg"
+                                dd_name="企业采购" id="a_qycgchannel"
+                                onmouseover="showgaoji('a_qycgchannel','__ddnav_qycg');"
+                                onmouseout="hideotherchannel('a_qycgchannel','__ddnav_qycg');">企业采购</a>
+                            <ul class="ddnewhead_gcard_list" id="__ddnav_qycg"
+                                onmouseover="showgaoji('a_qycgchannel','__ddnav_qycg');"
+                                onmouseout="hideotherchannel('a_qycgchannel','__ddnav_qycg');">
+                                <li><a target="_blank" href="http://giftcard.dangdang.com/giftcardCompany" name="qycg_1"
+                                        dd_name="大宗采购">大宗采购</a></li>
+                                <li><a target="_blank" href="http://giftcard.dangdang.com/" name="qycg_2"
+                                        dd_name="礼品卡采购">礼品卡采购</a></li>
+                                <li><a target="_blank" href="http://account.dangdang.com/payhistory/mymoney.aspx"
+                                        name="gqycg_3" dd_name="礼品卡激活" rel="nofollow">礼品卡激活</a></li>
+                                <li><a target="_blank" href="http://help.dangdang.com/details/page24" name="qycg_4"
+                                        dd_name="礼品卡使用">礼品卡使用</a></li>
+                            </ul>
+                        </li>
+                        <li class="hover "><a class="menu_btn" href="javascript:void(0);" style="cursor:default;"
+                                name="ddkf_0" dd_name="客户服务" id="a_bzzxchannel"
+                                onmouseover="showgaoji('a_bzzxchannel','__ddnav_bzzx');"
+                                onmouseout="hideotherchannel('a_bzzxchannel','__ddnav_bzzx');">客户服务</a>
+                            <ul class="ddnewhead_gcard_list" id="__ddnav_bzzx"
+                                onmouseover="showgaoji('a_bzzxchannel','__ddnav_bzzx');"
+                                onmouseout="hideotherchannel('a_bzzxchannel','__ddnav_bzzx');">
+                                <li><a target="_blank" href="http://help.dangdang.com/index" name="ddkf_2"
+                                        dd_name="帮助中心">帮助中心</a></li>
+                                <li><a target="_blank" href="http://return.dangdang.com/reverseapplyselect.aspx"
+                                        name="ddkf_3" dd_name="自助退换货">自助退换货</a></li>
+                                <li><a target="_blank"
+                                        href="http://order.dangdang.com/InvoiceApply/InvoiceOnlineReissue.aspx"
+                                        name="tsjy_2" dd_name="自助发票" rel="nofollow">自助发票</a></li>
+                                <li><a target="_blank" href="http://help.dangdang.com/details/page206" name="ddkf_4"
+                                        dd_name="联系客服">联系客服</a></li>
+                                <li><a target="_blank" href="http://help.dangdang.com/email_contact" name="tsjy_1"
+                                        dd_name="我要投诉" rel="nofollow">我要投诉</a></li>
+                                <li><a target="_blank" href="http://help.dangdang.com/email_contact" name="tsjy_2"
+                                        dd_name="意见建议" rel="nofollow">意见建议</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ddnewhead_welcome" display="none;">
+                        <span id="nickname">欢迎光临当当，请<a dd_name="登录" target="_self"
+                                rel="nofollow" class="login_link">登录</a><a dd_name="成为会员"
+                                href="javascript:PageTopRegist();" target="_self" rel="nofollw">成为会员</a></span>
+                        <div class="tel_pop" style="display:none" id="__ddnav_sjdd"
+                            onmouseover="showgaoji('a_phonechannel','__ddnav_sjdd');"
+                            onmouseout="hideotherchannel('a_phonechannel','__ddnav_sjdd');">
+                            <a target="_blank" href="http://t.dangdang.com/20130220_ydmr" class="title"><i
+                                    class="icon_tel"></i>手机当当</a><i class="title_shadow"></i>
+                            <ul class="tel_pop_box">
+                                <li><a href="http://t.dangdang.com/20130220_ydmr"
+                                        dd_name="手机二维码"><span>当当手机客户端</span><img
+                                            src="http://img3.ddimg.cn/00363/doc/erweima2.png"><span
+                                            class="text">随手查订单<br>随时享优惠</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="new_head_znx" id="znx_content" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+        <div id="header_end"></div>
+        <!--CreateDate  2017-07-03 00:30:01-->
+    </div>
+
+    <div class="shoppingcart_wrapper" id="ad_cpt_11850">
+        <div ddt-pit="seq0"><a
+                href="http://a.dangdang.com/tjump.php?q=fvyhWCLIziqgJ1FaYLcaEFYy%2BDcvkAknxfrLg47OC%2FrtdNxAVLH%2FaFOTr0bIb2nc40Dmzbz3DAHU498URVzMJLyY1JH2y3zYEV1%2FI6QpC4cf1A%3D"
+                target="_blank" rel="nofollow"><img src="http://img62.ddimg.cn/2020/1/17/2020011717355384743.jpg"></a>
+        </div>
+    </div>
+    <div class="logo_line">
+        <div class="w960">
+            <div class="shopping_procedure"><span class="current">我的购物车</span><span>填写订单</span><span>完成订单</span></div>
+            <div class="logo"><a href="http://www.dangdang.com"><img src="img/dd_logo.jpg?v=20181226" alt=""></a></div>
+        </div>
+    </div>
+    <div class="add_line" id="district">
+        <div class="w960">
+            <div class="address" id="dp_adress">
+                <span class="icon_adr">&nbsp;</span>配送地址：
+                <div class="select_add">
+                    <span class="text fn-select-address">北京市顺义区</span>
+                    <div class="area_pop" style="display:none;">
+                        <a href="javascript:district.close()" class="close"></a>
+                        <ul class="tab">
+                            <li id="ap_province" class="fn-show-province"><a href="javascript:void(0)"
+                                    id="selected_111">北京</a></li>
+                            <li id="ap_city" class="fn-show-city"><a href="javascript:district.show_city_init(this)"
+                                    id="selected_1">北京市</a></li>
+                            <li id="ap_area" class="fn-show-area choose"><a
+                                    href="javascript:district.show_area_init(this)" id="selected_101">顺义区</a></li>
+                            <li id="ap_village" style="display:none" class="fn-show-village"><a
+                                    href="javascript:district.show_village_init(this)" id="selected_0">请选择</a></li>
+                        </ul>
+                        <ul class="list list_notaligned fn-adress">
+
+                        </ul>
+                    </div>
+                </div>
+                <!--<a href="#" class="tip"></a>-->
+                <span class="tip_c" style="display:none;">针对不同配送地址，您的货物可能出现缺货或无货状态，敬请谅解。</span>
+            </div>
+        </div>
+    </div>
+    <div class="w960" id="cart">
+        <div id="LoginFalse" class="login_tip"><span class="icon"></span>您还没有登录！登录后购物车的商品将保存到您的帐号中<a
+                href="javascript:cart.cartLogin()" class="btn">立即登录</a></div>
+        <ul class="shopping_title" id="j_carttitle">
+            <li class="f1"><input class="auto_box1" id="autologin"
+                name="autologin" type="checkbox" tabindex="7">全选</li>
+            <li class="f2">商品信息</li>
+            <li class="f3">单价（元）</li>
+            <li class="f4">数量</li>
+            <li class="f4">金额（元）</li>
+            <li class="f5">操作</li>
+        </ul>
+        <div class="fn-shops" id="J_cartContent">
+            
+        </div>
+        <div class="shoppingcart_loading" id="J_cartLoading" style="display: none;"><img height="30" width="30"
+                src="images/loading.gif"></div>
+    </div>
+    <div style="position: static; bottom: -20px; z-index: 101; width: 100%; left: 0px;">
+        <div class="shopping_total" id="J_totalMoneyBlock">
+            <div class="shopping_total_right">
+                <a class="total_btn fn-checkout" href="javascript:;" id="checkout_btn" dd_name="结算">结&nbsp;&nbsp;算</a>
+                <div class="subtotal">
+                    <p><span class="cartsum">总计(不含运费)：</span><span id="payAmount" class="price">¥0</span></p>
+
+                    <p><span class="cartsum">已节省：</span><span id="totalFavor">¥0.00</span></p>
+                </div>
+                <div class="pop_del pop_ebook fn-ck" id="ck_tip" style="display:none">
+                    <h1>电子书重复购买提示</h1>
+                    <p></p>
+                    <a id="ck_link" href="#" class="pop_btn">朕知道了</a>
+                </div>
+            </div>
+            <div class="shopping_total_left" id="J_leftBar">
+                <input class="auto_box1" id="autologin"
+                name="autologin" type="checkbox" tabindex="7">全选
+                <a id="j_removeproducts" href="javascript:void(0)" class="fn-batch-remove" dd_name="批量删除按钮">批量删除</a>
+                <span>已选择<font color="red" id="totalCount">0</font>件商品</span>
+                <div id="J_batchRemoveProductBox" style="display: none;z-index:-1;left:0px;" class="pop_del">
+                    <p>您确定要批量删除商品吗？</p><a href="javascript:;" class="pop_btn fn-confirm-batchremovebox">确定</a><a
+                        href="javascript:;" class="pop_btn fn-close-batchremovebox">取消</a>
+                </div>
+                <div id="J_batchAddWishBox" style="display: none;z-index:-1;left:85px;" class="pop_del col ">
+                    <p>您确定要批量移入收藏吗？</p><a href="javascript:;" class="pop_btn fn-confirm-batchaddwish">确定</a><a
+                        href="javascript:;" class="pop_btn fn-close-batchwishbox">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div class="footer_nav_box">
+                <div class="footer_copyright"><span>Copyright (C) 当当网 2004-2014, All Rights Reserved</span><a
+                        href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001051000098" target="_blank"
+                        class="footer_img" rel="nofollow"><img
+                            src="http://img4.dangdang.com/bottom/validate.gif"></a><span><a
+                            href="http://www.miibeian.gov.cn/" target="_blank"
+                            rel="nofollow">京ICP证041189号</a></span><span>出版物经营许可证&nbsp;新出发京批字第直0673号</span></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let user_name = Cookie.getItem("user_name");
+        let user_id = Cookie.getItem("user_id");
+        if (user_name && user_id) {
+            $("#nickname").text("当前用户:" + user_name);
+        }
+        $("#nickname").click(function () {
+            // 删除信息
+            Cookie.removeItem("user_name");
+            Cookie.getItem("user_id");
+            // 刷新页面
+            window.location.reload();
+        })
+        $("#nickname").on("click",".login_link",function(){
+            // let cont = $(this).find("span").attr("class");
+            window.open(`http://127.0.0.1/ddw/denlu.html`)
+        })
+    </script>
+</body>
+
+</html>

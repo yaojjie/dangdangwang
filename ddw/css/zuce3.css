@@ -1,0 +1,16 @@
+.register_box .nmcolor{
+    background: rgb(247, 188, 188);
+    color: red;
+    border: 1px solid red;
+}
+.nmcolor{
+    background: rgb(247, 188, 188);
+    color: red;
+    border: 1px solid red;
+}
+.register_box .mcolor{
+    color: red;
+}
+.mcolor{
+    color: red;
+}

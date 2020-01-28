@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/1.css">
+    <link rel="stylesheet" href="./css/3.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/Cookie.js"></script>
+    <script src="./js/shouye.js"></script>
+    <script src="./js/shouye2.js"></script>
+    <script src="./js/shouye3.js"></script>
+    <script src="./js/shouye4.js"></script>
+    <script src="./js/shouye5.js"></script>
+    <script src="./js/shouye6.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/shouye.css">
+</head>
+<body>
+    <!-- <script>
+        var lista = document.querySelectorAll('.list')[0];
+        var list = lista.querySelectorAll('.info');
+        
+        
+        var len = list.length;
+        var goodslist = new Array();
+        for (var i = 0; i < len; i++){
+          var  a = lis[i].querySelectorAll('a');
+            
+            // var detail = lis[i].querySelector('.item-info');//转折点
+            // var detaila = detail.querySelector("a").href;
+            // var detailsrc = detail.querySelector("img").src ? var detailsrc = detail.querySelector("img").src : 默认;
+            // var detailp = detail.querySelector(".suolve").innerText;
+            var o = {};
+            // o.name = name;
+            // o.a1= a[0].href;
+            o.a1= a[0].innerText;
+            // o.a2= a[1]?a[1].href:"";
+            o.a2Text= a[1]?a[1].innerText:"";
+            // o.a3= a[2]?a[2].href:"";
+            o.a3Text= a[2]?a[2].innerText:"";
+            // o.index=i;
+            // o.detaila = detaila;
+            // o.detailsrc = detailsrc;
+            // o.detailsrc = detailsrc;
+            // o.detailp = detailp;
+            goodslist.push(o);
+        }
+        console.log(JSON.stringify(goodslist));
+    </script> -->
+    <div id="head"></div>
+    <div class="hnh1"><div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div></div>
+    
+    <div id="footer"></div>
+
+
+    <script>
+        $(() => {
+            $("#head").load("./head.html")
+            $("#footer").load("./footer.html")
+
+            $.ajax({
+            type:"post",
+            url:"./php/shouye.php",
+            dataType:"json",
+            success: function(response){
+                let m = new Manager(response);
+                m.init();
+            }
+        });
+        $.ajax({                     
+                type:"post",               
+                url:"./php/lunbo.php",  
+                dataType:"json",          
+                success: function(data){  
+                    // console.log(data); 
+                    /* 002-根据数据来渲染页面 */ 
+                    // (new Mange(data)).init(); 
+                    let ms = new Mange(data);
+                ms.init();
+            }
+        });
+        $.ajax({                     
+                type:"post",               
+                url:"./php/tushu.php",  
+                dataType:"json",          
+                success: function(data){  
+                    // console.log(data); 
+                    /* 002-根据数据来渲染页面 */ 
+                    // (new Mange(data)).init(); 
+                    let mz = new Manges(data);
+                mz.init();
+            }
+        });
+        $.ajax({                     
+                type:"post",               
+                url:"./php/fuzhuang.php",  
+                dataType:"json",          
+                success: function(data){  
+                    // console.log(data); 
+                    /* 002-根据数据来渲染页面 */ 
+                    // (new Mange(data)).init(); 
+                    let ma = new Mangez(data);
+                ma.init();
+            }
+        });
+        $.ajax({                     
+                type:"post",               
+                url:"./php/baihuo.php",  
+                dataType:"json",          
+                success: function(data){  
+                    // console.log(data); 
+                    /* 002-根据数据来渲染页面 */ 
+                    // (new Mange(data)).init(); 
+                    let mc = new Mangex(data);
+                mc.init();
+            }
+        });
+        $.ajax({                     
+                type:"post",               
+                url:"./php/weini.php",  
+                dataType:"json",          
+                success: function(data){  
+                    // console.log(data); 
+                    /* 002-根据数据来渲染页面 */ 
+                    // (new Mange(data)).init(); 
+                    let mt = new Manget(data);
+                mt.init();
+            }
+        });
+        })
+    </script>
+</body>
+</html>

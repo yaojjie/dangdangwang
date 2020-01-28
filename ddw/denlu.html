@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/footer2.css">
+    <link rel="stylesheet" href="./css/denlu.css">
+    <link rel="stylesheet" href="./css/zuce3.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/captcha.js"></script>
+    <script src="./js/denlu.js"></script>
+    <script src="./js/Cookie.js"></script>
+    <script src="./js/md5.js"></script>
+
+</head>
+
+<body>
+    <div class="head">
+        <a href="http://www.dangdang.com">
+            <img src="./img/logo.png">
+        </a>
+        <div class="improve">
+            <span class="icon"></span><a class="info" href="http://survey.dangdang.com/html/2526.html"
+                target="_blank">“登录页面“改进建议</a>
+        </div>
+    </div>
+    <div class="login_bg">
+        <img src="./img/1.jpg" style="display: block; float: left;margin-left: 50px;">
+        <div class="set_area">
+            <div class="wrap clearfix">
+                <div id="J_cheatProofTop" class="new_tip"
+                    style="display: block; width: 338px; height: 24px; right: -1px; top: -27px;">
+                    <div>
+                        请勿设置与邮箱及其他网站相同的登录及支付密码，<a href="http://blog.dangdang.com/?p=22276">谨防诈骗</a>！
+                    </div>
+                </div>
+                <!--<div class="pic">
+                    <a id="aBgPicUrlReferTo" target="_blank" dd_name="登录广告图" style="display:block;outline:none;blr:expression(this.onFocus=this.blur());"
+                       href="http://a.dangdang.com/api/data/cpx/link/38930001/1">
+                        <img id="J_loginTopAdIE8" style="display: none;" onerror="this.src='/images/ad_default.jpg';document.getElementById('aBgPicUrlReferTo').setAttribute('href','http://cosmetic.dangdang.com/20151130_45pn');"></img>
+
+                        <img id="J_loginTopAd" src="http://a.dangdang.com/api/data/cpx/img/38930001/1"
+                             onerror="this.onerror=null;this.src='http://img60.ddimg.cn/upload_img/00418/lisiyi/480-384-11-30.jpg';document.getElementById('aBgPicUrlReferTo').setAttribute('href','http://cosmetic.dangdang.com/20151130_45pn');"  style="background: url(/images/loading1.gif) no-repeat 50% 50%;"/>
+                    </a>
+                </div>-->
+                <div id="J_loginDiv">
+                    <link href="https://login.dangdang.com/style/login_core.css?20170215" rel="stylesheet"
+                        >
+                    <link href="https://login.dangdang.com/style/login_core_mobile_code.css?20160804" rel="stylesheet"
+                        type="text/css">
+                    <link href="https://login.dangdang.com/style/captcha.css?20160727" rel="stylesheet" type="text/css">
+                    <div class="switch_btn">
+                        <div class="hd"><a class="switch start" href="javascript:void(0);"></a><a class="switch quick"
+                                href="javascript:void(0);" style="display:none"></a></div>
+                        <div class="info_remind">
+                            <div class="info"> <span class="safe_icon"></span> <span id="J_startTip">扫码登录更安全</span>
+                                <!-- 鎵爜鐧诲綍鏇村畨鍏� --> <span id="J_quickTip" style="display:none">密码登录在这里</span>
+                                <!-- 瀵嗙爜鐧诲綍鍦ㄨ繖閲� --> <span class="arrow_icon"></span></div>
+                        </div>
+                    </div>
+                    <div id="J_loginCoreWrap" class="infro" ddt-area="login_password_div">
+                        <p  class="password_login">密码登录</p><!-- 瀵嗙爜鐧诲綍 -->
+                        <!-- 鐢ㄦ埛鍚� -->
+                        <div class="username" id="username_div"> <span></span> <input
+                                class="user" id="txtUsername" name="txtUsername" type="text" autocomplete="off"
+                                maxlength="40" value="" errordata="0" tabindex="1" placeholder="邮箱/昵称/手机号码"> <a class="text_del"
+                                id="clearUsername" href="javascript:void(0);" style="display:none;"></a> <a
+                                class="replacetype01 " id="selectusertype" href="javascript:void(0);"
+                                style="display:none;">更换类型</a><!-- 鏇存崲绫诲瀷 --> 
+                        </div>
+                        <p id="user_mindstyle" class="tips"> <span id="liDivErrorMessage"></span> <span
+                                class="error_choose" id="selecttype"> <b>请选择用户类型</b><!-- 璇烽€夋嫨鐢ㄦ埛绫诲瀷 --> <input
+                                    id="selusertypemail" type="radio" value="" name="selusertype"><label
+                                    class="error_nickname">昵称</label><!-- 鏄电О --> <input id="selusertypemobile"
+                                    type="radio" value="" name="selusertype"><label
+                                    class="error_mobilename">手机号码</label><!-- 鎵嬫満鍙风爜 --> </span> </p> <!-- 瀵嗙爜 -->
+                        <div class="password" id="password_div"> <span></span> <input class="pass" id="txtPassword"
+                                name="txtPassword" type="password" maxlength="20" autocomplete="off" errordata="0"
+                                tabindex="2" placeholder="密码"> 
+                        </div>
+                        <p class="tips" id="pass_mindstyle"> <span id="login_password_error"
+                                style="display: none"></span> <span class="big_tip"
+                                id="passwordCapslock">键盘大写锁定已打开，请注意大小写!</span><!-- 閿洏澶у啓閿佸畾宸叉墦寮€锛岃娉ㄦ剰澶у皬鍐�! -->
+                        </p>
+                        <div id="J_rotateVcodeWrap" class="Rotate">
+                            <div class="Rotate-operate"><label class="Rotate-prompt">请点击下方图片，旋转至正确方向</label><label
+                                    class="error is-visible">请点击下方图片</label><a class="Rotate-refresh">换一组</a>
+                            </div>
+                            <input class="text pin" type="text" id="txt_vcode" name="txt_vcode"
+                            autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5" style="height: 35px;width: 130px; float: left;">
+                            <canvas width="150" height="40" id="captcha" style="margin-left: 10px;"></canvas>
+                            <span id="J_tipVcode" class="cue warn"></span>
+                        </div>
+                        <div id="J_captchVcodeWrap" style="display:none;"></div>
+                        <div id="J_vcodeWrap" style="display:none;">
+                            <div class="code_wrap" id="inputcode" style="display:block;">
+                                <div class="code" id="vcode_model"> <span></span> <input class="codes"
+                                        id="txtVerifyCode" name="txtVerifyCode" type="text" maxlength="4"
+                                        autocomplete="off" tabindex="3" errordata="0" > <label
+                                        class="pwdReplace" id="codeReplacer" style="display: none;"
+                                        for="txtVerifyCode">验证码</label><!-- 楠岃瘉鐮� --> <span class="placeholder"
+                                        style="background: none; position: absolute; z-index: 20; color: rgb(176, 176, 176); width: 0px; height: 0px; font-size: 13.3333px; padding-left: 0px; font-family:Microsoft Yahei; display: none; top: 0px; left: 40px; line-height: 0px;">验证码</span>
+                                </div> <a class="code_pic" id="vcodeImgWrap" href="javascript:void(0);"> <img
+                                        id="imgVcode" tabindex="4"> </a> <a id="vcodeImgBtn" href="javascript:void(0);"
+                                    tabindex="5">换张图</a><!-- 鎹㈠紶鍥� -->
+                            </div>
+                            <p class="tips" id="vcode_mindstyle" style="display:block;"> <span
+                                    id="login_vcode_error"></span> </p>
+                        </div> <!-- 蹇樿瀵嗙爜鍙婅嚜鍔ㄧ櫥闄�  -->
+                        <p class="auto_login"> <a href="http://safe.dangdang.com/find_password.php" tabindex="8"
+                                target="_blank">忘记密码？</a><!-- 蹇樿瀵嗙爜锛� --> <input class="auto_box" id="autologin"
+                                name="autologin" type="checkbox" tabindex="7"> <span
+                                style="display: none;">七天内自动登录</span><!-- 涓冨ぉ鍐呰嚜鍔ㄧ櫥褰� --> <span class="safe"
+                                style="display: inline-block;">请勿在公用电脑上勾选此选项</span><!-- 璇峰嬁鍦ㄥ叕鐢ㄧ數鑴戜笂鍕鹃€夋閫夐」 --> <input
+                                type="hidden" id="ispersist" name="ispersist" value="on"> </p> <!-- 鐧诲綍  -->
+                        <p class="btn"><a id="submitLoginBtn"  tabindex="6">登&nbsp;录</a></p>
+                        <!-- 鐧�&nbsp;褰� -->
+                        <p class="register">
+                            <!-- 寮瑰嚭鐧诲綍涓嬩笉鏄剧ず鈥滅珛鍗虫敞鍐屾寜閽€� --> <a id="J_loginToRegister" class="register_btn"
+                                href="register.php?returnurl=http://www.dangdang.com/" tabindex="9">立即注册</a>
+                            <!-- 绔嬪嵆娉ㄥ唽 --> <span style="margin-right:50px">使用合作网站登录</span><!-- 浣跨敤鍚堜綔缃戠珯鐧诲綍 --> <a
+                                target="_blank" href="http://help.dangdang.com/details/page258" tabindex="21">《隐私政策》</a>
+                        </p>
+                        <div class="partner clearfix" id="share_login">
+                            <dl>
+                                <dt><a class="qq" id="qqShare" href="javascript:void(0)" title="ＱＱ" tabindex="10">ＱＱ</a>
+                                </dt><!-- 锛憋急 -->
+                                <dt><a class="wx" id="wxShare" href="javascript:void(0)" title="微信" tabindex="11">微信</a>
+                                </dt><!-- 寰俊 -->
+                                <dt><a class="wb" id="wbShare" href="javascript:void(0)" title="新浪微博"
+                                        tabindex="12">新浪微博</a></dt><!-- 鏂版氮寰崥 -->
+                                <dt><a class="alpay" id="alipayShare"
+                                        href="https://login.dangdang.com/login_third_alipay/login_alipay.aspx?returnurl=<?= $returnurl ?>"
+                                        title="支付宝" tabindex="13">支付宝</a></dt><!-- 鏀粯瀹� -->
+                                <dd id="showShareMore"> <a class="more" href="javascript:void(0)">更多<em></em></a>
+                                    <!-- 鏇村 -->
+                                    <ul id="shareMore" style="display:none">
+                                        <li class="arrow"></li>
+                                        <li><a id="doubanShare" href="javascript:void(0)">豆瓣</a></li><!-- 璞嗙摚 -->
+                                        <li><a id="baiduShare" href="javascript:void(0)">百度</a></li><!-- 鐧惧害 -->
+                                        <li><a id="fetionShare" href="javascript:void(0)">飞信</a></li><!-- 椋炰俊 -->
+                                        <li class="mr0"><a id="renrenShare" href="javascript:void(0)">人人网</a></li>
+                                        <!-- 浜轰汉缃� -->
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div> <!-- 蹇€熺櫥褰� -->
+                    <div id="J_qrcodeWrap" class="infro quick_login" style="display: none;" ddt-area="login_qrcode_div">
+                        <p class="password_login">扫码登录</p><!-- 鎵爜鐧诲綍 -->
+                        <!-- 鎵爜杩囩▼ -->
+                        <div class="scan_process" style="display: block;">
+                            <div class="two_code">
+                                <div class="pic_code" ><img id="J_qrcodeImg" src="" title="" alt="网络故障，请稍候重试">
+                                </div><!-- 缃戠粶鏁呴殰锛岃绋嶅€欓噸璇� -->
+                                <div class="tel_pic" style="opacity:1;filter: alpha(opacity=100);display:none"></div>
+                                <!-- 鎵爜澶辫触寮瑰眰 -->
+                                <div class="scan_false" style="display:none">
+                                    <div class="panel"></div>
+                                    <div class="false_remind">
+                                        <p>二维码已失效</p><!-- 浜岀淮鐮佸凡澶辨晥 --> <a href="javascript:void(0);"
+                                            class="refresh">请点击刷新</a><!-- 璇风偣鍑诲埛鏂� -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tel_remind">
+                                <div class="information">打开<a href="http://t.dangdang.com/20130220_ydmr"
+                                        target="_blank"><span>手机当当</span></a>扫一扫登录</div><!-- 鎵撳紑 鎵嬫満褰撳綋 鎵竴鎵櫥褰� -->
+                            </div>
+                        </div> <!-- 鎵爜鎴愬姛 -->
+                        <div class="scan_success" style="display:none;">
+                            <div class="img"><img src="https://login.dangdang.com/images/tel_modle.png"></div>
+                            <p class="qrsuccess">扫描成功!</p><!-- 鎵弿鎴愬姛 -->
+                            <p class="confirm">请在手机上确认登录</p><!-- 璇峰湪鎵嬫満涓婄‘璁ょ櫥褰� --> <a href="javascript:void(0);"
+                                class="return_btn">返回二维码登录</a><!-- 杩斿洖浜岀淮鐮佺櫥褰� -->
+                        </div>
+                        <p class="register" style="display:none"><a
+                                href="https://login.dangdang.com/register.php?returnurl=http://www.dangdang.com/"
+                                class="register_btn">立即注册</a><span class="now_regist"></span></p>
+                        <!--绔嬪嵆娉ㄥ唽-->
+                    </div> <!-- 鐭俊楠岃瘉鐮� -->
+                    <div id="J_yidiLoginWrap" class="login_core infro" style="display: none;"
+                        ddt-area="login_nolocal_mobile_div">
+                        <ul class="list">
+                            <li>
+                                <p class="tip">为了更好的保证您账户的安全，请进行短信验证</p> <!-- 涓轰簡鏇村ソ鐨勪繚璇佹偍璐︽埛鐨勫畨鍏紝璇疯繘琛岀煭淇￠獙璇� -->
+                            </li>
+                            <li>
+                                <div class="name">手机号：</div>
+                                <div id="J_nolocalMobile"></div><!-- 鎵嬫満鍙凤細 -->
+                            </li>
+                            <li>
+                                <div class="name">短信验证码：</div><!-- 鐭俊楠岃瘉鐮侊細 --> <input id="J_ePhoneCode" name=""
+                                    type="text" class="small" maxlength="6"> <a id="J_getEPhoneCode" class="btn_check"
+                                    href="javascript:;" onclick="return false;">获取验证码</a><!-- 鑾峰彇楠岃瘉鐮� --> <a
+                                    id="J_unGetEPhoneCode" class="btn_uncheck unable" href="javascript:;"
+                                    style="display:none;">获取验证码</a><!-- 鑾峰彇楠岃瘉鐮� -->
+                                <div id="J_ePhoneCodeTipInfo" class="ltip"></div>
+                            </li>
+                            <li>
+                                <!-- 鐧诲綍  --> <a class="btn" id="J_ePhoneCodeSubmit" href="javascript:void(0);"
+                                    tabindex="6">登&nbsp;录</a><!-- 鐧�&nbsp;褰� -->
+                                <p> <span class="contact"> <a class="contact_service"
+                                            href="http://help.dangdang.com/details/page206" target="_blank">联系客服</a>
+                                        <!-- 鑱旂郴瀹㈡湇  --> <a class="change_verify" id="J_change2OrderVerify"
+                                            href="javascript:;" onclick="return false;">换一种验证方式</a> </span> </p>
+                            </li>
+                        </ul>
+                    </div> <!-- 璐墿鎯呮櫙楠岃瘉鐮� -->
+                    <div id="J_yidiLoginOrderWrap" class="login_core infro" style="display: none;"
+                        ddt-area="login_nolocal_order_div">
+                        <p class="ordertip">为了更好的保证您的账户安全，请完成安全验证</p> <!-- 涓轰簡鏇村ソ鐨勪繚璇佹偍鐨勮处鎴峰畨鍏紝璇峰畬鎴愬畨鍏ㄩ獙璇� -->
+                        <p class="ordertip">请点击近期购买过的商品（单选）</p> <!-- 璇风偣鍑昏繎鏈熻喘涔拌繃鐨勫晢鍝侊紙鍗曢€夛級 -->
+                        <p class="tip_infomation">2次验证错误后,系统将自动锁定账户48小时,请谨慎操作。</p>
+                        <!-- 2娆￠獙璇侀敊璇悗,绯荤粺灏嗚嚜鍔ㄩ攣瀹氳处鎴�48灏忔椂,璇疯皑鎱庢搷浣溿€� -->
+                        <div style="width:312px;height:156px;position:relative">
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg"><img src="https://login.dangdang.com/images/no_order_img.png"><input
+                                    type="hidden" value=""></div>
+                            <div class="orderimg-button" style="display: none;"></div>
+                            <div class="orderimg-mask" style="display: none;"></div>
+                        </div>
+                        <div class="orderspan"> <span id="J_yidiLoginOrder_error" style="display: none"></span>
+                            <!-- 閫夋嫨閿欒锛岃閲嶆柊閫夋嫨  -->
+                        </div> <!-- 鐧诲綍  --> <a class="orderbtn" id="J_yidiLoginOrderSubmit"
+                            href="javascript:void(0);">登&nbsp;录</a><!-- 鐧�&nbsp;褰� -->
+                        <p style="margin-top: 15px;"> <span class="contact"> <a class="contact_service"
+                                    href="http://help.dangdang.com/details/page206" target="_blank">联系客服</a>
+                                <!-- 鑱旂郴瀹㈡湇  --> <a class="change_verify" id="J_change2MobileVerify" href="javascript:;"
+                                    onclick="return false;">换一种验证方式</a> </span> </p> <input type="hidden" id="order_id"
+                            value="">
+                    </div> <!-- 璐墿鎯呮櫙楠岃瘉鐮侀獙璇侀€氳繃鍚庣粦瀹氭墜鏈� -->
+                    <div id="J_yidiBindMobileWrap" class="login_core infro" style="display: none;">
+                        <ul class="list list-bind">
+                            <li>
+                                <p class="tip-bind">您的账户安全级别较低，建议您绑定手机，提升安全的同时享受当当丰富的手机服务</p>
+                                <!-- 鎮ㄧ殑璐︽埛瀹夊叏绾у埆杈冧綆锛屽缓璁偍缁戝畾鎵嬫満锛屾彁鍗囧畨鍏ㄧ殑鍚屾椂浜彈褰撳綋涓板瘜鐨勬墜鏈烘湇鍔� -->
+                            </li>
+                            <li>
+                                <div class="name-bind">手机号：</div> <input id="J_txtMobile" name="" type="text"
+                                    class="long-bind" maxlength="11"><!-- 鎵嬫満鍙凤細 --> <span id="J_txtMobileTipImg"
+                                    class="icon"></span>
+                                <div id="J_txtMobileTipInfo" class="ltip-bind"></div>
+                            </li>
+                            <li>
+                                <div class="name-bind">验证码：</div><!-- 楠岃瘉鐮侊細 --> <input id="J_smsVCode" name=""
+                                    type="text" class="small-bind" maxlength="6"> <span id="J_smsVCodeTipImg"
+                                    class="icon code_w"></span> <a id="J_getSmsVCode" class="btn-check-bind"
+                                    href="javascript:;" onclick="return false;">获取验证码</a><!-- 鑾峰彇楠岃瘉鐮� --> <a
+                                    id="J_unGetSmsVCode" class="btn-uncheck-bind unable" href="javascript:;"
+                                    style="display:none;">获取验证码</a><!-- 鑾峰彇楠岃瘉鐮� -->
+                                <div id="J_smsVCodeTipInfo" class="ltip-bind"></div>
+                            </li>
+                            <li>
+                                <!-- 纭畾  --> <a class="btn-bind" id="J_smsVCodeSubmit"
+                                    href="javascript:void(0);">确&nbsp;定</a><!-- 纭�&nbsp;瀹� -->
+                                <!-- 绋嶅悗缁戝畾  -->
+                                <p class="later"><a id="J_laterBind" href="javascript:void(0);">稍后绑定&gt;</a></p>
+                                <!-- 绋嶅悗缁戝畾>  -->
+                            </li>
+                        </ul>
+                    </div> <iframe src="https://rcc.ddimg.cn/fraud.html?token=20191225194936847715357351874917533"
+                        frameborder="0" width="0" height="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                    <div class="login_btn" id="submit_signin_div"> <input type="hidden" id="login_type"
+                            name="login_type" value="0"> <input type="hidden" id="txtCaptchaCode" name="txtCaptchaCode"
+                            value="0"> <input type="hidden" id="txtRotateCode" name="txtRotateCode" value="0"> </div>
+                </div>
+            </div>
+            <a class="click_area" href="http://a.dangdang.com/api/data/cpx/link/38930001/1"></a>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $(() => {
+            $("#footer").load("./footer2.html")
+        })
+    </script>
+</body>
+
+</html>

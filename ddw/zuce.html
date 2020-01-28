@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/zuce.css">
+    <link rel="stylesheet" href="./css/zuce2.css">
+    <link rel="stylesheet" href="./css/zuce3.css">
+    <link rel="stylesheet" href="./css/footer2.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/captcha.js"></script>
+    <script src="./js/md5.js"></script>
+    <script src="./js/zuce.js"></script>
+</head>
+
+<body>
+    <div class="ddnewhead_wrap">
+        <div class="ddnewhead_content ddnewhead_content2">
+            <div class="ddnewhead_operate" id="__ddnav_menu">
+                <ul class="ddnewhead_operate_nav">
+                    <li class="ddnewhead_cart"><a name="t_1" href="javascript:AddToShoppingCart(0);">购物车<span
+                                id="cart_items_count" class="cart_num"></span></a></li>
+                    <li class="ddnewhead_separate"></li>
+                    <li><a name="t_2" href="http://order.dangdang.com/myallorders.aspx" target="_blank">我的订单</a></li>
+                    <li class="ddnewhead_separate"></li>
+                    <li class="ddnewhead_mydd"><a name="t_3" href="http://my.dangdang.com/myhome/homepage.aspx"
+                            target="_blank" class="menu_btn" id="a_myddchannel"
+                            onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
+                            onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">我的当当</a>
+                        <div class="ddnewhead_mydd_panel" onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
+                            onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');" id="__ddnav_mydd">
+                            <ul class="ddnewhead_mydd_list">
+                                <li><a name="t_3_1" href="http://order.dangdang.com/myallorders.aspx"
+                                        target="_blank">我的订单</a></li>
+                                <li><a name="t_3_2" href="http://account.dangdang.com/payhistory/mycoupons.aspx"
+                                        target="_blank">购物礼券</a></li>
+                                <li><a name="t_3_3" href="http://my.dangdang.com/memberpoints/index.aspx"
+                                        target="_blank">我的积分</a></li>
+                                <li><a name="t_3_4" href="http://customer.dangdang.com/wishlist/cust_wish_list.aspx"
+                                        target="_blank">我的收藏</a></li>
+                                <li><a name="t_3_5" href="http://comm.dangdang.com/review/reviewbuy.php"
+                                        target="_blank">我的评论</a></li>
+                                <li><a name="t_3_6" href="http://e.dangdang.com/ebook/listUserEbooks.do"
+                                        target="_blank">数字商品</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ddnewhead_separate"></li>
+                    <li class="ddnewhead_gcard"><a name="t_4" href="http://giftcard.dangdang.com" class="menu_btn"
+                            id="a_lipchannel" onmouseover="showgaoji('a_lipchannel','__ddnav_card');"
+                            onmouseout="hideotherchannel('a_lipchannel','__ddnav_card');" target="_blank">礼品卡</a>
+                        <div class="ddnewhead_gcard_panel" onmouseover="showgaoji('a_lipchannel','__ddnav_card')"
+                            onmouseout="hideotherchannel('a_lipchannel','__ddnav_card');" id="__ddnav_card">
+                            <ul class="ddnewhead_gcard_list">
+                                <li><a name="t_4_1" href="http://giftcard.dangdang.com" target="_blank">购买</a></li>
+                                <li><a name="t_4_2" href="http://account.dangdang.com/payhistory/mymoney.aspx"
+                                        target="_blank">激活</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ddnewhead_separate"></li>
+                    <li><a name="ddheadmobile" href="http://static.dangdang.com/topic/744/200778.shtml"
+                            target="_blank">手机当当</a></li>
+                    <li class="ddnewhead_separate"></li>
+                    <li><a name="t_5" href="http://misc.dangdang.com/giftcardCompany/company.aspx"
+                            target="_blank">企业销售</a></li>
+                    <li class="ddnewhead_separate"></li>
+                    <li class="help"><a name="t_6" href="http://support.dangdang.com/helpcenter/" target="_blank">帮助</a>
+                    </li>
+                </ul>
+                <p id="nickname">欢迎光临当当网，请<a name="ddnav_login"
+                        href="https://login.dangdang.com/signin.aspx?returnurl=https%3A//login.dangdang.com/register.php%3Freturnurl%3Dhttp%3A//www.dangdang.com/"
+                        target="_self" class="login_link">登录</a><a name="ddnav_register"
+                        href="https://login.dangdang.com/Register.aspx" target="_self" class="login_link">免费注册</a></p>
+            </div>
+            <div class="ddnewhead_logo"><a href="http://www.dangdang.com" title="返回首页" name="ddnav_logo"><img
+                        src="https://login.dangdang.com/images/ddnewhead_logo.gif" alt="当当网"></a></div>
+            <div class="clear"></div>
+        </div>
+        <div class="ddnewcarthead_bottom"></div>
+    </div>
+    <form id="register_form" method="post" action="register.php" onsubmit="return false;">
+        <input type="password" style="display: none;">
+        <div id="bd">
+            <!--默认-->
+            <div class="shadow_box">
+                <div class="register_box">
+                    <div class="head">
+                        <span class="dd_more"><a href="http://www.dangdang.com" class="home">当当首页</a><a
+                                href="http://help.dangdang.com/details/page2">注册帮助</a></span>
+                        <a href="javascript:void(0);" class="head_a head_a1">新用户注册</a>
+                        <a href="register_company.php?returnurl=http://www.dangdang.com/" class="head_a">企业用户注册</a>
+                    </div>
+                    <div class="help_icon_trigger" style="left: 1241.5px;">
+                        <a title="联系客服" id="feedback" name="feedback" target="_blank"
+                            href="http://faqrobot.dangdang.com/robot/robotDD.html?sysNum=dd_1000">
+                        </a>
+                    </div>
+                    <div class="body">
+                        <div id="J_cheatProofTop" class="new_tip" style="display: block;">
+                            <div>
+                                贴心提示：请勿设置与邮箱密码相同的账户登录密码或支付密码，防止不法分子窃取您的当当账户信息，<a
+                                    href="http://blog.dangdang.com/?p=22276">谨防诈骗</a>！
+                            </div>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tbody>
+                                <tr class="denlu_item">
+                                    <td class="t">手机号码</td>
+                                    <td class="z_index2">
+                                        <input name="txt_username" id="txt_username" autocomplete="off" maxlength="40"
+                                            tabindex="1" value="" placeholder="请输入您的手机号码" type="text" class="text">
+                                        <!-- <span id="spn_username_ok" class="icon_yes" style="display: none;"></span> -->
+                                        <span id="J_tipUsername" class="cue warn">手机号可用于登录、找回密码、接收订单通知等服务</span>
+                                    </td>
+                                </tr>
+                                <tr class="denlu_item">
+                                    <td class="t">登录密码</td>
+                                    <td>
+                                        <input name="txt_password" id="txt_password" onpaste="return false;"
+                                            tabindex="2" type="password" class="text" maxlength="20">
+                                        <span id="spn_password_ok" class="icon_yes" style="display: none;"></span>
+                                        <span id="J_tipPassword" class="cue warn"></span>
+                                        <!-- <span id="J_tipUpperCaseBox" class="prompt"><span
+                                                class="icon"></span>键盘大写锁定已打开，请注意大小写!</span> -->
+                                        <!-- <span id="spnPwdStrongTips"> -->
+                                            <!-- <span id="spnPwdStrong1" class="cue warn j_pwdStrong"
+                                                style="display: none;">
+                                                <span class="msg_level"><span
+                                                        class="s1"></span><span></span><span></span></span>密码过于简单
+                                            </span> -->
+                                            <!-- <span id="spnPwdStrong2" class="cue warn j_pwdStrong"
+                                                style="display: none;">
+                                                <span class="msg_level"><span class="s1"></span><span
+                                                        class="s2"></span><span></span></span>试试字母、符号、数字的组合更安全
+                                            </span> -->
+                                            <!-- <span id="spnPwdStrong3" class="cue warn j_pwdStrong"
+                                                style="display: none;">
+                                                <span class="msg_level"><span class="s1"></span><span
+                                                        class="s2"></span><span class="s3"></span></span>密码设置安全，放心使用
+                                            </span> -->
+                                        <!-- </span> -->
+                                    </td>
+                                </tr>
+                                <tr class="denlu_item">
+                                    <td class="t">确认密码</td>
+                                    <td>
+                                        <input id="txt_repassword" name="txt_repassword" onpaste="return false"
+                                            tabindex="3" type="password" class="text" maxlength="20"><span
+                                            id="spn_repassword_ok" class="icon_wrong" style="display: none;"></span>
+                                        <span id="J_tipSurePassword" class="cue"></span>
+                                    </td>
+                                </tr>
+                                <!-- <tr id="J_mobileV"  style="display:none">
+                                    <td class="t">手机验证</td>
+                                    <td>
+                                        <input name="mobile" id="txt_mobile" maxlength="11" tabindex="4" type="text"
+                                            class="text" placeholder="请输入你要验证的手机号码"><span id="spn_mobile_ok"
+                                            class="icon_yes" style="display: none;"></span>
+                                        <span id="J_tipMobile" class="cue warn"></span>
+                                    </td>
+                                </tr> -->
+                                <tr class="denlu_item">
+                                    <!-- 图形验证码 -->
+                                    <td class="t j-vcode">验证码</td>
+                                    <td class="j-vcode">
+                                        <input class="text pin" type="text" id="txt_vcode" name="txt_vcode"
+                                            autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5">
+                                        <a class="code_pic" id="vcodeImgWrap" name="change_code_img"
+                                            >
+                                            <canvas width="120" height="38" id="captcha"></canvas>
+                                        </a>
+                                        <a id="vcodeImgBtn" name="change_code_link" class="code_picww"
+                                            >换张图</a>
+                                        <span id="spn_vcode_ok" class="icon_yes pin_i" style="display: none;"></span>
+                                        <span id="J_tipVcode" class="cue warn"></span>
+                                        <!--<span class="icon_wrong pin_i"></span>-->
+                                    </td>
+                                    <!-- 短信验证码 -->
+                                    <!-- <td class="t j-phoneVcode" style="display: none">短信验证码</td> -->
+                                    <!-- <td class="j-phoneVcode" style="display: none">
+                                        <input id="J_MobileCode" name="txt_pop_sms_vcode" autocomplete="off"
+                                            maxlength="6" tabindex="6" type="text" class="text pin"
+                                            placeholder="请填写短信验证码">
+                                        <a class="get_pin get_pinUnClick" id="J_countDownTip" href="javascript:void(0);"
+                                            style="display: none;" tabindex="5">2分钟后重新获取</a>
+                                        <a class="get_pin" id="sendMobileCode" href="javascript:void(0);"
+                                            tabindex="5">获取短信验证码</a>
+                                        <span id="spn_mobileCode_ok" class="icon_yes" style="display: none;"></span>
+                                        <span id="J_tipMobileCode" class="cue"></span>
+                                    </td> -->
+                                </tr>
+                                <tr class="denlu_item">
+                                    <td class="t">&nbsp;</td>
+                                    <td class="clause">
+                                        <span class="float_l">
+                                            <input id="chb_agreement" name="chb_agreement"
+                                                onmouseover="this.style.cursor='pointer';this.style.cursor='hand';"
+                                                tabindex="7" type="checkbox" >我已阅读并同意
+                                            <a target="_blank" href="http://help.dangdang.com/details/page12"
+                                                tabindex="8">《当当交易条款》</a>
+                                            <a target="_blank" href="http://help.dangdang.com/details/page42"
+                                                tabindex="9">《当当社区条款》</a>和
+                                            <a target="_blank" href="http://help.dangdang.com/details/page258"
+                                                tabindex="10">《当当隐私政策》</a>
+                                        </span>
+                                        <span id="J_tipAgreement" class="cue"></span>
+                                    </td>
+                                </tr>
+                                <tr class="denlu_item">
+                                    <td class="t">&nbsp;</td>
+                                    <td><a id="J_submitRegister" href="javascript:void(0);" class="btn_login"
+                                            tabindex="11">立即注册</a><a id="J_submitRegisterUnclick" style="display: none;"
+                                            class="btn_login">注册中...</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="submit" id="btn_confirm" style="display: none">
+        <input type="hidden" name="hdn_username" id="hdn_username">
+        <input type="hidden" name="hdn_mobile" id="hdn_mobile">
+        <input type="hidden" name="hdn_password" id="hdn_password">
+        <input type="hidden" name="action_post" id="action_post" value="register">
+        <input type="hidden" name="returnurl" id="returnurl" value="http://www.dangdang.com/">
+        <input type="hidden" name="deviceId" id="deviceId"
+            value="WHJMrwNw1k/EFTomb0k2U6klYUrJawyO7AwMYJeW6f0ouBoWi3ISLyemLwlRDedlvL4K2Bs9mqIYcQumnBIme73p0jisXVoEfrj0Zi+JXf1TGA6a3EEZRlIaHMOKM8qKVBJ7HANruhDjgssVEtOEyiJGebD4P9188EGgAt2gp3yA0f2So+CXLrRu9LFLvKRhRKei9dcuNh8jTQVYiR58XoPC3cviTvY0wHShWqMe/g/02kNF0emrW7C4Vc2T0mj05SBMZJRjFRB4=1487582755342">
+    </form>
+    <div id="footer"></div>
+    <script>
+        $(() => {
+            $("#footer").load("./footer2.html")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div {
+    display: block;
+}
+body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+}
+body, button, ol, ul, li, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, input, form, textarea {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+    font-size: 100%;
+   
+}
+
+.top-box{
+    width: 100%;
+    padding: 0;
+}
+.top-box2{
+    position: relative;
+    margin: 0 auto;
+    font-size: 0;
+    width: 1200px;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+.hd {
+    font: 12px 'Hiragino Sans GB',"simsun","Arial";
+    color: #646464;
+    min-width: 1200px;
+    background-color: #fff;
+}
+.hd .tools {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+    z-index: 10010;
+}
+.tools .ddnewhead_operate {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    height: 34px;
+}
+.tools .ddnewhead_welcome {
+    padding: 5px 0 0 10px;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    float: right;
+    z-index: 50;
+}
+.tools .ddnewhead_operate_nav {
+    float: right;
+    padding-top: 2px;
+}
+.ddnewhead_operate_nav li.ddnewhead_cart {
+    background-image: none;
+}
+.ddnewhead_operate_nav li {
+    float: left;
+    height: 22px;
+    padding-top: 4px;
+    line-height: 21px;
+    background: url(http://img63.ddimg.cn/upload_img/00459/home/head_sprite.png) no-repeat left -285px;
+    position: relative;
+    z-index: 100;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.ddnewhead_operate_nav li.ddnewhead_cart b {
+    color: #ff2832;
+    font: bold 12px "Arial";
+}
+.ddnewhead_operate_nav li .icon_card {
+    float: left;
+    width: 15px;
+    height: 14px;
+    background: url(http://img63.ddimg.cn/upload_img/00459/home/home_sprite2.png) no-repeat -40px -86px;
+    overflow: hidden;
+    margin: 3px 9px 0 0;
+}
+i {
+    font-style: italic;
+}
+.ddnewhead_operate_nav li a {
+    display: block;
+    position: relative;
+    line-height: 21px;
+    padding: 0 7px 0 8px;
+}
+ul:after, .fbox:after, .clearfix:after {
+    content: ".";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.tools .ddnewhead_welcome a.login_link {
+    color: #ff2832!important;
+}
+.hd .ddnewhead_area {
+    float: left;
+    position: relative;
+    padding-top: 2px;
+    margin-right: -1px;
+    _margin-right: -10px;
+    z-index: 100;
+    font-family: arial,simsun;
+}
+.hd .logo_line {
+    height: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.hd .logo_line .logo {
+    overflow: hidden;
+    width: 362px;
+    height: 100px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.hd .logo_line .search form {
+    display: block;
+    height: 50px;
+}
+.hd .logo_line .search .label_search {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    width: 398px;
+    height: 36px;
+    line-height: 36px;
+    z-index: 1;
+    overflow: hidden;
+}
+.hd .logo_line .search .text {
+    width: 398px;
+    height: 18px;
+    border: 2px solid #ff2832;
+    border-right: none;
+    padding: 9px 0 9px 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    color: #323232;
+    font: 12px/18px 'Hiragino Sans GB',"simsun",Arial;
+    outline: 0;
+    background: none;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+.hd .logo_line .search .select {
+    position: absolute;
+    top: 0px;
+    left: 410px;
+    border: 2px solid #ff2832;
+    border-left: 0px solid #dedede;
+    width: 92px;
+    height: 36px;
+    font: 16px/36px "Microsoft Yahei";
+    color: #969696;
+    padding: 0 0 0 14px;
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+#hd .logo_line .search .select .icon {
+    width: 13px;
+    height: 7px;
+    overflow: hidden;
+    background: url(http://img63.ddimg.cn/upload_img/00459/home/head_sprite.png) no-repeat -14px -90px;
+    position: absolute;
+    left: 88px;
+    top: 16px;
+}
+.logo_line .search .select_pop {
+    width: 104px;
+    height: 288px;
+    border: 1px solid #dedede;
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    background-color: #fff;
+    overflow: auto;
+}

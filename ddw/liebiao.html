@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/1.css">
+    <link rel="stylesheet" href="./css/3.css">
+    <link rel="stylesheet" href="./css/liebiao.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/liebiao.js"></script>
+</head>
+<body>
+    <!-- <script>
+        let lis = $(".cloth_shoplist").find("li");
+        let data= [];
+        lis.each(function(){
+            let o = {}
+            o.src = $(this).find("img")[0].src;
+            o.price = Number($.trim($(this).find(".price").text()).slice(1));
+            o.name = $.trim($(this).find(".name").text());
+            o.search_hot = $.trim($(this).find(".search_hot_word").text());
+            o.star = $.trim($(this).find(".star").text());
+            o.link = $.trim($(this).find(".link").text());
+            data.push(o);
+        })
+       console.log(JSON.stringify(data));
+        
+    </script> -->
+
+    <div id="head"></div>
+    <div class="touimg"><img src="./img/touimg.PNG" alt=""></div>
+    <div class="box">
+        <div class="btn-class">
+            <span class="typeBtn" data-type="default">默认</span>
+            <span class="typeBtn" data-type="desc">按照价格从高到低</span class="typeBtn" data-type="default">
+            <span class="typeBtn" data-type="asc">按照价格从低到高</span class="typeBtn" data-type="default">
+        </div>
+        <ul class="box-list">
+            <!-- <li class="item">
+                <div class="item-box">
+                    <img src="http://img3m9.ddimg.cn/41/22/1486978259-1_b_2.jpg" alt="">
+                    <div class="price">￥99</div>
+                    <div class="name">哈哈哈</div>
+                    <div class="search_hot">啦啦啦</div>
+                    <div class="star">22万+评论</div>
+                    <div class="link">大希地旗舰店</div>
+                </div>
+                <div class="addCart">加入购物车</div>
+                <div class="addsc">收藏</div>
+            </li> -->
+        </ul>
+    </div>
+    <div id="page" class="page">
+        
+    </div>
+    <div id="footer"></div>
+    <script>
+    $(() => {
+            $("#head").load("./head.html")
+            $("#footer").load("./footer.html")
+    })
+    </script>
+</body>
+</html>

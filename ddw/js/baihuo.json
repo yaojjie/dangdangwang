@@ -1,0 +1,35 @@
+{
+    "i1": [
+        "<b style=color:black>阿芙</b> 美妆 /",
+        "<b style=color:black>乐扣乐扣</b> 厨具水具 /",
+        "<b style=color:black>良品铺子</b> 旗舰店 /",
+        "<b style=color:black>飞利浦</b> 旗舰店 /",
+        "<b style=color:black>碧然德</b> 旗舰店 /",
+        "<b style=color:black>网易严选</b> 旗舰店"
+    ],
+    "i2": [
+        "<b style=color:black>烹饪锅具</b>  /",
+        "<b style=color:black>餐具/套装</b>  /",
+        "<b style=color:black>厨房配件</b>  /",
+        "<b style=color:black>保温杯/壶</b>  /",
+        "<b style=color:black>茶具</b>  /",
+        "<b style=color:black>整理收纳</b> /",
+        "<b style=color:black>清洁护理</b> /",
+        "<b style=color:black>创意家居</b> "
+    ],
+    "i3": [
+        "./img/wj1.jpg",
+        "./img/wj2.hp425sm7",
+        "./img/wj3.jpg",
+        "./img/wj4.jpg",
+        "./img/wj5.jpg"
+    ],
+    "i4": [
+        "<b style=color:black>童书畅销榜</b>  /",
+        "<b style=color:black>童书3-6岁榜</b>  /",
+        "<b style=color:black>童书7-10岁榜</b>  /",
+        "<b style=color:black>母婴馆</b>  /",
+        "<b style=color:black>玩具馆</b>  /",
+        "<b style=color:black>童装童鞋馆</b> "
+    ]
+}
